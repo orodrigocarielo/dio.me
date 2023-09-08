@@ -1,0 +1,30 @@
+# PROJETO PIPELINE ETL ONDE MOSTRAMOS A EXTRAÇÃO E MANIPULAÇÃO DOS DADOS DE UMA TABELA NO EXCEL.
+# NESSA PROJETO É POSSIVEL VER QUANTOS LITROS DE GASOLINA VOCÊ COMPRAVA COM BASE NO SEU SALÁRIO MÍNIMO.
+
+# LINK: https://colab.research.google.com/drive/1f6K9MQSZuqcCDXqrRPxYuxT5LYk9NdIY?usp=sharing
+
+import pandas as pd
+
+nome = input('Digite seu nome: ')
+print('*******************************')
+print(f'Olá {nome}, seja bem vindo !! ')
+print('Digite a opção desejada:')
+print('*******************************')
+print('1: Ver histórico de preços \n2: Ver Ranking do melhor ano \n3: Sair')
+
+while True:
+    opcao = input('Digite sua opção: ')
+
+    if opcao == '0':
+        print('Encerrando o programa...')
+        break
+    elif opcao == '1':
+        df = pd.read_excel('/content/gasolina_marco_anos.xlsx')
+        display(df)
+    elif opcao == '2':
+        df = pd.read_excel('/content/gasolina_marco_anos.xlsx')
+        df['melhores anos'] = df['LITROS_COM_SALARIO_MINIMO']
+        df = df.sort_values(by='melhores anos', ascending=False)
+        display(df)
+    else:
+        print('Opção inválida. Por favor, escolha 1, 2 ou 0 para sair.')
