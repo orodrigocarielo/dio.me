@@ -1,0 +1,53 @@
+class ContaBancaria:
+    def __init__(self, saldo_inicial=0):
+        self.saldo = saldo_inicial
+        self.extrato = []
+
+    def depositar(self, valor):
+        self.saldo += valor
+        self.extrato.append(f'Depósito: +{valor}')
+
+    def sacar(self, valor):
+        if self.saldo >= valor:
+            self.saldo -= valor
+            self.extrato.append(f'Saque: -{valor}')
+            print(f"Saque de {valor} realizado com sucesso.")
+        else:
+            print("Saldo insuficiente. Não é possível efetuar o saque.")
+
+    def visualizar_extrato(self):
+        print("Extrato:")
+        for operacao in self.extrato:
+            print(operacao)
+        print(f'Saldo atual: {self.saldo}')
+
+
+# Função para interação com o usuário
+def interagir_com_usuario(conta):
+    while True:
+        print("\n1. Depositar")
+        print("2. Sacar")
+        print("3. Visualizar Extrato")
+        print("4. Sair")
+
+        escolha = input("Escolha a operação (1/2/3/4): ")
+
+        if escolha == '1':
+            valor_deposito = float(input("Digite o valor a depositar: "))
+            conta.depositar(valor_deposito)
+        elif escolha == '2':
+            valor_saque = float(input("Digite o valor a sacar: "))
+            conta.sacar(valor_saque)
+        elif escolha == '3':
+            conta.visualizar_extrato()
+        elif escolha == '4':
+            print("Saindo do sistema. Obrigado!")
+            break
+        else:
+            print("Escolha inválida. Tente novamente.")
+
+
+# Exemplo de uso:
+conta = ContaBancaria()
+
+interagir_com_usuario(conta)
