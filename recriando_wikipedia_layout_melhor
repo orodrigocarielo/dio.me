@@ -1,0 +1,91 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Wikipedia Recriado</title>
+</head>
+<body>
+    <header>
+        <h1>Wikipedia Recriado</h1>
+    </header>
+    
+    <nav>
+        <a href="#">Página Inicial</a>
+        <a href="#">História</a>
+        <a href="#">Eventos</a>
+        <a href="#">Contato</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Seção 1</h2>
+            <p>Conteúdo da seção 1...</p>
+        </section>
+        
+        <section>
+            <h2>Seção 2</h2>
+            <p>Conteúdo da seção 2...</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Wikipedia Recriado</p>
+    </footer>
+</body>
+</html>
+
+
+
+CSS:
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+}
