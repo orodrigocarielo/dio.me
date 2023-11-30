@@ -1,0 +1,69 @@
+PAGINA PRINCIPAL
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal - Clínica Médica</title>
+</head>
+<body>
+
+  <div id="menu">
+    <!-- ... (mesmo código do template) ... -->
+  </div>
+
+  <div id="header">
+    <img src="imagem_header_pagina_principal.png" alt="Imagem Header Página Principal">
+  </div>
+
+  <div id="content">
+    <p>Bem-vindo à nossa clínica médica. Somos especializados em proporcionar cuidados de saúde de alta qualidade.</p>
+  </div>
+
+  <div id="footer">
+    <p>Telefone: (11) 1234-5678 | E-mail: contato@clinica.com</p>
+  </div>
+
+</body>
+</html>
+
+
+
+
+  PAGINA TEMPLATE.HTML
+
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Médica</title>
+</head>
+<body>
+
+  <div id="menu">
+    <ul>
+      <li><a href="pagina_principal.html">Página Principal</a></li>
+      <li><a href="sobre_a_clinica.html">Sobre a Clínica</a></li>
+      <li><a href="horario_atendimento.html">Horário de Atendimento</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </div>
+
+  <div id="header">
+    <img src="imagem_header.png" alt="Imagem Header">
+  </div>
+
+  <div id="content">
+    <!-- Conteúdo da página -->
+  </div>
+
+  <div id="footer">
+    <p>Telefone: (11) 1234-5678 | E-mail: contato@clinica.com</p>
+  </div>
+
+</body>
+</html>
